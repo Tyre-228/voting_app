@@ -1,9 +1,8 @@
 * {
     margin: 0px;
     padding: 0px;
-    color: black;
+    color: #344055;
     border: none;
-    font-family: 'Averta Demo PE Cutted Demo';
     font-weight: 400;
     font-size: 24px;
     box-sizing: border-box;
@@ -38,10 +37,6 @@ input, button, textarea, select {
     outline: none;
     background: transparent;
     border-radius: 0px;
-}
-input:focus, button:focus, textarea:focus, select:focus {
-    border: none;
-    box-shadow: none;
 }
 label {
     display: block;
