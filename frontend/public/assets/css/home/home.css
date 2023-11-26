@@ -114,27 +114,24 @@ html, body {
   align-items: center;
 }
 
-.header__logo > a {
+.header__logo {
   font-family: "Vina Sans", sans-serif;
   font-size: 48px;
   transition: 200ms all;
 }
 
 .sign-out-button {
-  padding: 4px 5px;
+  background-color: #FF8811;
+  width: 100%;
+  padding: 4px 6px;
   border-radius: 5px;
-  background-color: #344055;
+  border: 2px solid transparent;
   transition: 200ms all;
-}
-.sign-out-button > a {
-  color: #FF8811;
 }
 .sign-out-button:hover {
   transition: 200ms all;
-  background-color: #FF8811;
-}
-.sign-out-button:hover > a {
-  color: #344055;
+  border: 2px solid black;
+  box-shadow: 0px 0px 2px black;
 }
 
 .main {
@@ -165,22 +162,20 @@ html, body {
 }
 
 .enter-voting__enter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #344055;
-  color: #FF8811;
-  padding: 2px 7px;
+  background-color: #FF8811;
+  width: 100%;
+  padding: 4px 6px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: 200ms all;
+  border-radius: 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  transition: 200ms all;
 }
 .enter-voting__enter:hover {
   transition: 200ms all;
+  border: 2px solid black;
   box-shadow: 0px 0px 2px black;
-}
-.enter-voting__enter > * {
-  display: block;
 }
 
 .main {
@@ -226,11 +221,19 @@ html, body {
 }
 .main__voting-list > .voting-list__item .voting__more {
   background-color: #FF8811;
-  color: #344055;
-  text-decoration: underline;
   width: 100%;
+  padding: 4px 6px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: 200ms all;
+  border-radius: 0;
+}
+.main__voting-list > .voting-list__item .voting__more:hover {
+  transition: 200ms all;
+  border: 2px solid black;
+  box-shadow: 0px 0px 2px black;
 }
 .main__voting-list > .voting-list__item:hover {
   transition: 200ms all;
   box-shadow: 0px 0px 3px #344055;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=home.css.map */

@@ -55,7 +55,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
 }
-.header__logo > a {
+.header__logo {
     font-family: 'Vina Sans', sans-serif;
     font-size: 48px;
     transition: 200ms all;
@@ -63,20 +63,7 @@ html, body {
 .header__sign-out {
 }
 .sign-out-button {
-    padding: 4px 5px;
-    border-radius: 5px;
-    background-color: #344055;
-    transition: 200ms all;
-    & > a {
-        color: #FF8811;
-    }
-    &:hover {
-        transition: 200ms all;
-        background-color: #FF8811;
-        & > a {
-            color: #344055;
-        }
-    }
+    @include button;
 }
 //---HEADER-------------------------------------------------------------------------------------------------------
 .main {
@@ -103,22 +90,10 @@ html, body {
     }
 }
 .enter-voting__enter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #344055;
-    color: #FF8811;
-    padding: 2px 7px;
+    @include button;
+    border-radius: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    transition: 200ms all;
-    &:hover {
-        transition: 200ms all;
-        box-shadow: 0px 0px 2px black;
-    }
-    & > * {
-        display: block;
-    }
 }
 
 .main {
@@ -159,10 +134,8 @@ html, body {
         .voting__stats {
         }
         .voting__more {
-            background-color: #FF8811;
-            color: #344055;
-            text-decoration: underline;
-            width: 100%;
+            @include button;
+            border-radius: 0;
         }
     }
     & > .voting-list__item:hover {

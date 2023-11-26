@@ -1,0 +1,116 @@
+@import "../cleaner/cleaner.scss";
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Vina+Sans&display=swap');
+//---IMPORTS------------------------------------------------------------------------------------------------------
+html, body {
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #F4D06F;
+}
+.header {
+    display: block;
+}
+.main {
+    display: block;
+    flex: 1 1 auto;
+}
+.wrapper > * {
+    padding: 0px 15%;
+}
+@media(max-width: 1920px) {
+    .wrapper > * {
+        padding: 0px 8%;
+    }
+}
+@media(max-width: 1080px) {
+    .wrapper > * {
+        padding: 0px 5%;
+    }
+}
+@media(max-width: 720px) {
+    .wrapper > * {
+        padding: 0px 3%;
+    }
+}
+@media(max-width: 520px) {
+    .wrapper > * {
+        padding: 0px 7px;
+    }
+}
+.title {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 36px;
+}
+//---BASE---------------------------------------------------------------------------------------------------------
+.header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 48px;
+    transition: 200ms all;
+}
+.go-to-home__button {
+    @include button;
+}
+//---HEADER--------------------------------------------------------------------------------------------------------
+
+
+.main__info {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3% 0px;
+    & > * {
+        padding: 0px 2%;
+    }
+}
+.info__title {
+    font-size: 36px;
+    font-family: 'Vina Sans', sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 2%;
+}
+.info__content {
+    
+}
+.info__votes {
+}
+.info__option-list {
+}
+.option-list {
+}
+.option-item {
+}
+.option {
+}
+.percentage {
+}
+.percentage__text {
+}
+.percentage__visuale {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #344055;
+    overflow: hidden;
+    &:before {
+        content: "";
+        display: block;
+        position: relative;
+        left: 0;
+        top: 0;
+        background-color: #FF8811;
+        width: attr(data-percentage);
+    }
+}

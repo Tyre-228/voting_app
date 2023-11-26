@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting app</title>
-    <link rel="stylesheet" href="./assets/css/main/main.css">
+    <link rel="stylesheet" href="./assets/css/authentification/authentification.css">
 </head>
 <body>
     <wrapper class="wrapper">
-        <header class="header">HEADER</header>
-        <main class="main">login</main>
-        <footer class="footer">FOOTER</footer>
+        <header class="header">
+            <div class="header__logo logo">Voting app</div>
+            <div class="header__go-to-login go-to-login">
+                <a href="./register.html" class="go-to-registration__button">Register</a>
+            </div>
+        </header>
+        <main class="main">
+            <form action="POST" class="main__form form">
+                <h2 class="form__title title">Log in</h2>
+                <div class="form__content">
+                    <div class="form__inputs">
+                        <input placeholder="Username" type="text" class="form__input input_username">
+                        <input placeholder="Password" type="text" class="form__input input_password">
+                    </div>
+                    <button class="form__submit submit">Log in</button>
+                </div>
+            </form>
+        </main>
     </wrapper>
     <script src="./assets/compiledJS/main.js"></script>
 </body>
