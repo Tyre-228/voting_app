@@ -1,0 +1,18 @@
+@import "../common/common.scss";
+
+//---IMPORTS-------------------------------------------------------------------------------------
+
+.title {
+    font-size: calc(1rem + 6vw);
+    letter-spacing: 5px;
+}
+.line {
+    width: 100vw;
+    height: 2px;
+    background-color: #344055;
+}
+.subtitle {
+    font-size: calc(1rem + 3vw);
+    font-family: 'Vina Sans', sans-serif;
+    letter-spacing: 2px;
+}

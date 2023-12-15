@@ -124,7 +124,12 @@ html, body {
   transition: 200ms all;
 }
 
-.go-to-login__button, .go-to-registration__button, .go-to-home__button {
+.header__cancel * > .material-symbols-outlined {
+  width: 100px;
+  font-size: 400px;
+}
+
+.voting__submit {
   background-color: #FF8811;
   width: 100%;
   padding: 4px 6px;
@@ -132,72 +137,8 @@ html, body {
   border: 2px solid transparent;
   transition: 200ms all;
 }
-.go-to-login__button:hover, .go-to-registration__button:hover, .go-to-home__button:hover {
+.voting__submit:hover {
   transition: 200ms all;
   border: 2px solid black;
   box-shadow: 0px 0px 2px black;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-}
-
-.main__form {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  width: 60%;
-  max-width: 760px;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid black;
-  padding: 10px 10px 30px 10px;
-}
-
-.form__title {
-  margin-bottom: 30px;
-}
-
-.form__content {
-  width: 70%;
-}
-
-.form__inputs {
-  margin-bottom: 5%;
-}
-.form__inputs > *:not(:last-child) {
-  margin-bottom: 3%;
-}
-.form__inputs .form__input {
-  border: 2px solid black;
-  padding: 2px 3px;
-  border-radius: 5px;
-  transition: 200ms all;
-  width: 100%;
-}
-.form__inputs .form__input:hover {
-  transition: 200ms all;
-  box-shadow: 0px 0px 2px black;
-}
-.form__inputs .form__input:focus {
-  transition: 200ms all;
-  box-shadow: 0px 0px 2px black;
-}
-
-.form__submit {
-  background-color: #FF8811;
-  width: 100%;
-  padding: 4px 6px;
-  border-radius: 5px;
-  border: 2px solid transparent;
-  transition: 200ms all;
-}
-.form__submit:hover {
-  transition: 200ms all;
-  border: 2px solid black;
-  box-shadow: 0px 0px 2px black;
-}/*# sourceMappingURL=authentification.css.map */
+}/*# sourceMappingURL=voting.css.map */

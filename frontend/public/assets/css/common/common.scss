@@ -51,3 +51,58 @@ label {
         scroll-behavior: auto !important;
     }
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+
+html, body {
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #F4D06F;
+}
+.header {
+    display: block;
+}
+.main {
+    display: block;
+    flex: 1 1 auto;
+}
+.wrapper > * {
+    padding: 0px 15%;
+}
+@media(max-width: 1920px) {
+    .wrapper > * {
+        padding: 0px 8%;
+    }
+}
+@media(max-width: 1080px) {
+    .wrapper > * {
+        padding: 0px 5%;
+    }
+}
+@media(max-width: 720px) {
+    .wrapper > * {
+        padding: 0px 3%;
+    }
+}
+@media(max-width: 520px) {
+    .wrapper > * {
+        padding: 0px 7px;
+    }
+}
+.title {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 36px;
+}
