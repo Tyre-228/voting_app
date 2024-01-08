@@ -1,14 +1,10 @@
-const fillPercentage = () => {
-    const lines = [...document.querySelectorAll(".percentage__visual")]
-    lines.forEach(line => {
-        const width = line.getAttribute("data-percentage")
-        line.style.setProperty("--width", width)
-    })
-}
+import fillPercentage from "./sub_js/UI/fillPercentage"
+import getUsers from "./sub_js/logic/login"
 
 
 const main = () => {
     fillPercentage()
+    getUsers()
 }
 
 
