@@ -4,7 +4,7 @@ let dbConnection = ""
 
 module.exports = {
     connectToDB: (cb) => {
-        const client = new MongoClient("mongodb://127.0.0.1:27017/voting_app")
+        const client = new MongoClient("mongodb+srv://tyre-228:Agent3310@cluster0.ql6vr8d.mongodb.net/voting-app")
         client.connect()
         .then((client) => {
             dbConnection = client.db()
