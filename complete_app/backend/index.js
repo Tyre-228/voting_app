@@ -16,9 +16,6 @@ connectToDB((err) => {
         db = getDB()
     }
 })
-app.get("/", (req, res) => {
-    res.send("Nothing")
-})
 app.get("/api", (req, res) => {
     res.send("API")
 })
@@ -66,27 +63,37 @@ app.get("/api/votings/:id", async (req, res) => {
         res.status(404).json({"status": "voting not found"})
     }
 })
-app.all("*", (req, res) => {
-    res.status("404").json({"status": "not found"})
-})
+
 //---API--------------------------------------------------------------------
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/login.html"))
+})
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/login.html"))
+})
+app.get("/home", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/home.html"))
+})
+app.get("/register", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/register.html"))
+})
+app.get("/sign-out", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/sign_out.html"))
+})
 
 
 
 
 
 
+//---Routes--------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
+app.all("*", (req, res) => {
+    res.status(404).sendFile(path.join(__dirname, "../public/404.html"))
+})
+app.all("api/*", (req, res) => {
+    res.status(404).json({"status": "not found"})
+})
 
 
 
