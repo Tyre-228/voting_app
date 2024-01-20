@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const path = require("path")
 const {connectToDB, getDB} = require("./database")
 const { userJSONValidator, votingJSONValidator } = require("./subFunctions")
@@ -17,6 +18,10 @@ connectToDB((err) => {
     }
 })
 
+
+app.use(cors({
+    origin: "*"
+}))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
