@@ -22,9 +22,7 @@
     }
 }
 .header__logo {
-    font-family: 'Vina Sans', sans-serif;
-    font-size: 48px;
-    transition: 200ms all;
+    @include logo;
 }
 .header__menu {
     display: flex;
@@ -55,8 +53,7 @@
     border: 2px solid #344055;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    padding: 2px;
-    color: #FF8811;
+    color: #344055;
     transition: 200ms all;
     &:focus {
         transition: 200ms all;
@@ -64,19 +61,11 @@
     }
 }
 .enter-voting__enter {
-    @include button;
+    @include side-button;
     border-radius: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    max-width: 100px;
-}
-@media(max-width: 520px) {
-    .main__enter-voting {
-        height: 52px;
-    }
-    .envet-voting__enter {
-        
-    }
+    width: fit-content;
 }
 .main {
     display: flex;

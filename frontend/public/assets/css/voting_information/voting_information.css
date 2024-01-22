@@ -110,6 +110,16 @@ html, body {
   font-size: 36px;
 }
 
+input[type=radio] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
 .header {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -122,6 +132,11 @@ html, body {
   font-family: "Vina Sans", sans-serif;
   font-size: 48px;
   transition: 200ms all;
+}
+@media (min-width: 1600px) {
+  .header__logo {
+    font-size: 56px;
+  }
 }
 
 .go-to-home__button {
@@ -136,6 +151,11 @@ html, body {
   transition: 200ms all;
   border: 2px solid black;
   box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 1600px) {
+  .go-to-home__button {
+    font-size: 42px;
+  }
 }
 
 .main__info {
@@ -201,6 +221,11 @@ html, body {
   transition: 200ms all;
   border: 2px solid black;
   box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 1600px) {
+  .main__vote {
+    font-size: 42px;
+  }
 }
 .main__vote > a > span {
   font-size: 10px;
