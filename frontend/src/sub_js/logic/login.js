@@ -1,9 +1,11 @@
 const getUsers = () => {
-    const users = fetch("/api/users").then(res => {
+    fetch("https://voting-app-7bai.onrender.com/api/users", {method: "GET", mode: "no-cors"})
+    .then(res => {
         console.log(res)
-        return res.body
-    }).then(data => {
-        console.log(data)
+        return res.json()
+    })
+    .then(data => {
+        // console.log(data)
     })
 }
 

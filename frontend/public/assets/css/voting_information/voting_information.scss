@@ -12,16 +12,12 @@
     align-items: center;
 }
 .header__logo {
-    font-family: 'Vina Sans', sans-serif;
-    font-size: 48px;
-    transition: 200ms all;
+    @include logo;
 }
 .go-to-home__button {
     @include button;
 }
 //---HEADER--------------------------------------------------------------------------------------------------------
-
-
 .main__info {
     border: 2px solid black;
     border-radius: 5px;

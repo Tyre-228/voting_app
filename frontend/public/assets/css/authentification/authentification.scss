@@ -12,9 +12,7 @@
     align-items: center;
 }
 .header__logo {
-    font-family: 'Vina Sans', sans-serif;
-    font-size: 48px;
-    transition: 200ms all;
+    @include logo;
 }
 .go-to-login__button, .go-to-registration__button, .go-to-home__button {
     @include button;
@@ -63,7 +61,16 @@
         }
     }
 }
-@media (max-width: 560px) {
+@media(min-width: 1600px) {
+    .form__inputs > .form__input {
+        height: 54px;
+        font-size: 32px;
+    }
+    .form__title {
+        font-size: 48px;
+    }
+}
+@media(max-width: 560px) {
     .form__inputs > .form__input {
         height: 48px;
     }

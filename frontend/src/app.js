@@ -4,7 +4,7 @@ import getUsers from "./sub_js/logic/login"
 
 const main = () => {
     fillPercentage()
-    getUsers()
+    // getUsers()
 }
 
 
