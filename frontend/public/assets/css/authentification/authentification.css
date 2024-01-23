@@ -61,6 +61,16 @@ label {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+input[type=radio] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
 html, body {
   height: 100%;
 }
@@ -110,6 +120,16 @@ html, body {
   font-size: 36px;
 }
 
+input[type=radio] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
 .header {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -122,6 +142,11 @@ html, body {
   font-family: "Vina Sans", sans-serif;
   font-size: 48px;
   transition: 200ms all;
+}
+@media (min-width: 1600px) {
+  .header__logo {
+    font-size: 56px;
+  }
 }
 
 .go-to-login__button, .go-to-registration__button, .go-to-home__button {
@@ -136,6 +161,11 @@ html, body {
   transition: 200ms all;
   border: 2px solid black;
   box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 1600px) {
+  .go-to-login__button, .go-to-registration__button, .go-to-home__button {
+    font-size: 42px;
+  }
 }
 
 .main {
@@ -188,6 +218,15 @@ html, body {
   box-shadow: 0px 0px 2px black;
 }
 
+@media (min-width: 1600px) {
+  .form__inputs > .form__input {
+    height: 54px;
+    font-size: 32px;
+  }
+  .form__title {
+    font-size: 48px;
+  }
+}
 @media (max-width: 560px) {
   .form__inputs > .form__input {
     height: 48px;
@@ -205,4 +244,9 @@ html, body {
   transition: 200ms all;
   border: 2px solid black;
   box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 1600px) {
+  .form__submit {
+    font-size: 42px;
+  }
 }/*# sourceMappingURL=authentification.css.map */
