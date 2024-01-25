@@ -1,10 +1,21 @@
-import fillPercentage from "./sub_js/UI/fillPercentage"
-import getUsers from "./sub_js/logic/login"
+import getUsers from "./logic/login"
+import cancelPopupWindowHandler from "./UI/cancelPopupHandler"
+import percentageHandler from "./UI/percentHandler"
+import votingConstructorFormHandler from "./UI/votingConstructorFormHandler"
 
 
 const main = () => {
-    fillPercentage()
     // getUsers()
+    if(document.URL.includes("voting_information.html")) {
+        percentageHandler()
+    }
+    else if(document.URL.includes("voting_constructor.html")) {
+        votingConstructorFormHandler()
+        cancelPopupWindowHandler()
+    }
+    else if(document.URL.includes("sign_out.html") || document.URL.includes("voting.html")) {
+        cancelPopupWindowHandler()
+    }
 }
 
 

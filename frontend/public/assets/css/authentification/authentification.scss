@@ -17,6 +17,13 @@
 .go-to-login__button, .go-to-registration__button, .go-to-home__button {
     @include button;
 }
+.header__cancel {
+    cursor: pointer;
+}
+.header__cancel > .material-symbols-outlined {
+    width: 100px;
+    font-size: 50px;
+}
 //---HEADER-------------------------------------------------------------------------------------------------------
 .main {
     display: flex;

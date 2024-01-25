@@ -60,6 +60,16 @@ label {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+input[type=radio] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
 html, body {
   height: 100%;
 }
@@ -109,6 +119,16 @@ html, body {
   font-size: 36px;
 }
 
+input[type=radio] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
 .header {
   border-bottom: 2px solid #344055;
   display: flex;
@@ -143,4 +163,9 @@ html, body {
   transition: 200ms all;
   border: 2px solid black;
   box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 1600px) {
+  .home {
+    font-size: 42px;
+  }
 }/*# sourceMappingURL=404.css.map */
