@@ -1,0 +1,65 @@
+.cancel-popup {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cancel-popup__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #F4D06F;
+}
+
+.cancel-popup__content > * {
+  padding: 10px 7px;
+}
+
+.cancel-popup__title {
+  width: 100%;
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.cancel-popup__alert {
+  margin-bottom: 25px;
+}
+
+.cancel-popup__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.cancel-popup__buttons > button {
+  background-color: #FF8811;
+  width: 100%;
+  padding: 4px 6px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: 200ms all;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.cancel-popup__buttons > button:hover {
+  transition: 200ms all;
+  border: 2px solid black;
+  box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 1600px) {
+  .cancel-popup__buttons > button {
+    font-size: 42px;
+  }
+}
+.cancel-popup__buttons > button:not(:last-child) {
+  margin-right: 15px;
+}/*# sourceMappingURL=cancel-popup.css.map */

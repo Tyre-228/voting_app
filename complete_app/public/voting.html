@@ -10,12 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Vina+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./assets/css/voting/voting.css">
+    <link rel="stylesheet" href="./assets/css/cancel-popup/cancel-popup.css">
 </head>
 <body>
     <wrapper class="wrapper">
+        <section class="cancel-popup" style="display: none;">
+            <div class="cancel-popup__content">
+                <h2 class="cancel-popup__title title">Are you sure?</h2>
+                <p class="cancel-popup__alert">All your progress in this page will be deleted. Do you want to leave anyway?</p>
+                <div class="cancel-popup__buttons">
+                    <button class="leave"><a href="./home.html">Leave</a></button>
+                    <button class="stop">Stop</button>
+                </div>
+            </div>
+        </section>
         <header class="header">
             <div class="logo header__logo">voting app</div>
-            <button class="header__cancel cancel"><a href="./home.html"><span class="material-symbols-outlined">close</span></a></button>
+            <button class="header__cancel cancel"><span class="material-symbols-outlined">close</span></button>
         </header>
         <main class="main">
             <div class="main__voting">
@@ -24,15 +35,15 @@
                     <ul class="option_list">
                         <li class="list__item">
                             <input type="radio" value="yes" class="option" name="option" id="yes">
-                            <label for="yes">Yes</label>
+                            <label class="voting_label" for="yes">Yes</label>
                         </li>
                         <li class="list__item">
                             <input type="radio" value="no" class="option" name="option" id="no">
-                            <label for="no">No</label>
+                            <label class="voting_label" for="no">No</label>
                         </li>
                         <li class="list__item">
                             <input type="radio" value="idk" class="option" name="option" id="idk">
-                            <label for="idk">IDK</label>
+                            <label class="voting_label" for="idk">IDK</label>
                         </li>
                     </ul>
                     <button class="voting__submit submit">submit</button>

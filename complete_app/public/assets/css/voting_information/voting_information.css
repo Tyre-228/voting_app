@@ -5,10 +5,15 @@
   color: #344055;
   border: none;
   font-weight: 400;
-  font-size: 24px;
+  font-size: calc(0.5rem + 1vw);
   box-sizing: border-box;
 }
 
+@media (min-width: 1920px) {
+  * {
+    font-size: 36px;
+  }
+}
 *::before, *::after {
   box-sizing: border-box;
   background-repeat: no-repeat;
@@ -62,13 +67,11 @@ label {
 }
 
 input[type=radio] {
-  border: 0 !important;
+  border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  height: 1px !important;
   overflow: hidden;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
+  padding: 0;
+  position: absolute;
 }
 
 html, body {
@@ -117,9 +120,14 @@ html, body {
 }
 .title {
   font-family: "Vina Sans", sans-serif;
-  font-size: 36px;
+  font-size: calc(1rem + 2.5vw);
 }
 
+@media (min-width: 1920px) {
+  .title {
+    font-size: 58px;
+  }
+}
 input[type=radio] {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -140,12 +148,12 @@ input[type=radio] {
 
 .header__logo {
   font-family: "Vina Sans", sans-serif;
-  font-size: 48px;
+  font-size: calc(1.5rem + 3vw);
   transition: 200ms all;
 }
 @media (min-width: 1600px) {
   .header__logo {
-    font-size: 56px;
+    font-size: 72px;
   }
 }
 

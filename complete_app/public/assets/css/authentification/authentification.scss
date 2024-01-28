@@ -17,6 +17,13 @@
 .go-to-login__button, .go-to-registration__button, .go-to-home__button {
     @include button;
 }
+.header__cancel {
+    cursor: pointer;
+}
+.header__cancel > .material-symbols-outlined {
+    width: 100px;
+    font-size: 50px;
+}
 //---HEADER-------------------------------------------------------------------------------------------------------
 .main {
     display: flex;
@@ -70,11 +77,7 @@
         font-size: 48px;
     }
 }
-<<<<<<< HEAD
-@media (max-width: 560px) {
-=======
 @media(max-width: 560px) {
->>>>>>> f3878a5f1f7eb248e0f47eaa5872fcfbfe6be7de
     .form__inputs > .form__input {
         height: 48px;
     }

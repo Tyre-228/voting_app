@@ -61,13 +61,11 @@ label {
 }
 
 input[type=radio] {
-  border: 0 !important;
+  border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  height: 1px !important;
   overflow: hidden;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
+  padding: 0;
+  position: absolute;
 }
 
 html, body {

@@ -45,7 +45,6 @@
 .main__enter-voting {
     min-width: fit-content;
     width: 80%;
-    height: 40px;
     display: flex;
     margin-bottom: 20px;
 }
@@ -54,6 +53,7 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: #344055;
+    padding-left: 5px;
     transition: 200ms all;
     &:focus {
         transition: 200ms all;
@@ -61,11 +61,12 @@
     }
 }
 .enter-voting__enter {
-    @include side-button;
+    @include button;
     border-radius: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     width: fit-content;
+    
 }
 .main {
     display: flex;
@@ -115,7 +116,3 @@
     }
 }
 //---MAIN---------------------------------------------------------------------------------------------------------
-
-
-//---FOOTER-------------------------------------------------------------------------------------------------------
-
