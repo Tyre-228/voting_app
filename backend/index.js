@@ -96,7 +96,7 @@ app.get("/api/votings/:id", async (req, res) => {
 })
 //---VOTINGS------------------------------------------------------------------------------------
 app.post("/api/users", (req, res) => {
-    const user = req.body
+    const user = JSON.parse(req.body)
     
     if(userJSONValidator(user) === true) {
         db.collection("users").insertOne(user)
@@ -112,7 +112,7 @@ app.post("/api/users", (req, res) => {
     }
 })
 app.post("/api/votings", (req, res) => {
-    const voting = req.body
+    const voting = JSON.parse(req.body)
 
     if(votingJSONValidator(voting) === true) {
         db.collection("votings").insertOne(voting)
