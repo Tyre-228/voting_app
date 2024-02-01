@@ -30,9 +30,25 @@ app.use((req, res, next) => {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+
 app.get("/", (req, res) => {
-    res.send("Nothing")
+    res.sendFile(path.join(__dirname, "../public/login.html"))
 })
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/login.html"))
+})
+app.get("/home", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/home.html"))
+})
+app.get("/register", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/register.html"))
+})
+app.get("/sign-out", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/sign_out.html"))
+})
+//---Routes--------------------------------------------------------------------
+
+
 app.get("/api", (req, res) => {
     res.send("API")
 })
@@ -165,28 +181,9 @@ app.delete("/api/votings/:id", (req, res) => {
 
 
 //---DELETES------------------------------------------------------------------------------------
-app.all("*", (req, res) => {
+app.all("api/*", (req, res) => {
     res.status("404").json({"status": "not found"})
 })
-
-//---API--------------------------------------------------------------------
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/login.html"))
-})
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/login.html"))
-})
-app.get("/home", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/home.html"))
-})
-app.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/register.html"))
-})
-app.get("/sign-out", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/sign_out.html"))
-})
-//---Routes--------------------------------------------------------------------
-
 
 
 
