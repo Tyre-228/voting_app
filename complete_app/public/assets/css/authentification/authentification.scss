@@ -21,17 +21,18 @@
     cursor: pointer;
 }
 .header__cancel > .material-symbols-outlined {
-    width: 100px;
-    font-size: 50px;
+    width: fit-content;
+    font-size: calc(3rem + 0.1vw);
 }
 //---HEADER-------------------------------------------------------------------------------------------------------
 .main {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 .main__form {
     min-width: fit-content;
-    width: 60%;
+    max-width: 800ox;
+    width: 70%;
     max-width: 760px;
     height: fit-content;
     border-radius: 5px;

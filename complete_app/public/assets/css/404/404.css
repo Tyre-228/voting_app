@@ -4,10 +4,20 @@
   color: #344055;
   border: none;
   font-weight: 400;
-  font-size: 24px;
+  font-size: calc(0.8rem + 0.8vw);
   box-sizing: border-box;
 }
 
+@media (min-width: 1920px) {
+  * {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  * {
+    font-size: 16px;
+  }
+}
 *::before, *::after {
   box-sizing: border-box;
   background-repeat: no-repeat;
@@ -84,8 +94,14 @@ html, body {
 }
 
 .main {
-  display: block;
+  display: flex;
   flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper > * {
@@ -114,9 +130,19 @@ html, body {
 }
 .title {
   font-family: "Vina Sans", sans-serif;
-  font-size: 36px;
+  font-size: calc(1rem + 2.5vw);
 }
 
+@media (min-width: 1920px) {
+  .title {
+    font-size: 58px;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 42px;
+  }
+}
 input[type=radio] {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -125,6 +151,10 @@ input[type=radio] {
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
+}
+
+#error {
+  color: red;
 }
 
 .header {
@@ -152,6 +182,7 @@ input[type=radio] {
   border-radius: 5px;
   border: 2px solid transparent;
   transition: 200ms all;
+  font-size: calc(1rem + 0.5vw);
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;

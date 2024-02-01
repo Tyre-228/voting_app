@@ -5,6 +5,7 @@
     border-radius: 5px;
     border: 2px solid transparent;
     transition: 200ms all;
+    font-size: calc(1rem + .5vw);
     &:hover {
         transition: 200ms all;
         border: 2px solid black;

@@ -18,13 +18,19 @@
     cursor: pointer;
 }
 .header__cancel > .material-symbols-outlined {
-    width: 100px;
-    font-size: calc(2rem + 1em);
+    width: fit-content;
+    font-size: calc(3rem + 0.1vw);
 }
 //---HEADER-------------------------------------------------------------------------------------------------------
+.main {
+    align-items: center;
+}
 .main__voting {
     border: 2px solid black;
     border-radius: 5px;
+    min-width: fit-content;
+    width: 70%;
+    max-width: 800px;
 }
 .voting__title {
     border-bottom: 2px solid black;

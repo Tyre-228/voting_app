@@ -5,7 +5,7 @@
   color: #344055;
   border: none;
   font-weight: 400;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.8rem + 0.8vw);
   box-sizing: border-box;
 }
 
@@ -95,15 +95,16 @@ html, body {
 }
 
 .main {
-  display: block;
+  display: flex;
   flex: 1 1 auto;
+  flex-direction: column;
 }
 
-@media (min-width: 1600px) {
-  .main > * {
-    max-width: 800px;
-  }
+.main__container {
+  display: flex;
+  flex-direction: column;
 }
+
 .wrapper > * {
   padding: 0px 15%;
 }
@@ -151,6 +152,10 @@ input[type=radio] {
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
+}
+
+#error {
+  color: red;
 }
 
 .header {
@@ -202,6 +207,7 @@ input[type=radio] {
   border-radius: 5px;
   border: 2px solid transparent;
   transition: 200ms all;
+  font-size: calc(1rem + 0.5vw);
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -251,6 +257,7 @@ input[type=radio] {
   border-radius: 5px;
   border: 2px solid transparent;
   transition: 200ms all;
+  font-size: calc(1rem + 0.5vw);
   border-radius: 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -285,18 +292,14 @@ input[type=radio] {
 }
 
 .main__voting-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
+  gap: 5px;
 }
 .main__voting-list > .voting-list__item {
   transition: 200ms all;
   overflow: hidden;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  max-width: 30%;
-  margin-right: 2%;
   margin-bottom: 10px;
   border: 2px solid #344055;
   border-radius: 10px;
@@ -316,6 +319,7 @@ input[type=radio] {
   border-radius: 5px;
   border: 2px solid transparent;
   transition: 200ms all;
+  font-size: calc(1rem + 0.5vw);
   border-radius: 0;
 }
 .main__voting-list > .voting-list__item .voting__more:hover {
@@ -331,4 +335,25 @@ input[type=radio] {
 .main__voting-list > .voting-list__item:hover {
   transition: 200ms all;
   box-shadow: 0px 0px 3px #344055;
+}
+
+@media (max-width: 1600px) {
+  .main__voting-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1280px) {
+  .main__voting-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 840px) {
+  .main__voting-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .main__voting-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=home.css.map */

@@ -4,8 +4,9 @@
     color: #344055;
     border: none;
     font-weight: 400;
-    font-size: calc(0.8rem + 1vw);
+    font-size: calc(0.8rem + 0.8vw);
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 @media(min-width: 1920px) {
     * {
@@ -89,13 +90,12 @@ html, body {
 }
 .main {
     display: flex;
-    justify-content: center;
     flex: 1 1 auto;
+    flex-direction: column;
 }
-@media(min-width: 1600px) {
-    .main > * {
-        max-width: 800px;
-    }
+.main__container {
+    display: flex;
+    flex-direction: column;
 }
 .wrapper > * {
     padding: 0px 15%;
@@ -143,4 +143,7 @@ input[type="radio"] {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important;
+  }
+  #error {
+    color: red;
   }

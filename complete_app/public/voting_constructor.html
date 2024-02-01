@@ -29,25 +29,27 @@
             <button class="header__cancel cancel"><span class="material-symbols-outlined">close</span></button>
         </header>
         <main class="main">
-            <h2 class="main__title title">Voting constructor</h2>
-            <div class="main__voting">
-                <h2 class="voting__title title">
-                    <input type="text" placeholder="Voting title" autofocus>
-                </h2>
-                <form class="voting__form form">
-                    <ul class="option_list">
-                        <li class="list__item">
-                            <button class="delete-item"><a href="./home.html"><span class="material-symbols-outlined">close</span></a></button>
-                            <label class="voting_label" for="yes">
-                                <input type="text" placeholder="option">
-                            </label>
-                        </li>
-                        <li class="add-option">
-                            <button class="add-option__button">Add new</button>
-                        </li>
-                    </ul>
-                    <button class="voting__submit submit">create voting</button>
-                </form>
+            <div class="main__content">
+                <h2 class="main__title title">Voting constructor</h2>
+                <div class="main__voting">
+                    <h2 class="voting__title title">
+                        <input type="text" placeholder="Voting title" id="voting-title" autofocus>
+                    </h2>
+                    <form class="voting__form form">
+                        <ul class="option_list">
+                            <li class="list__item">
+                                <button class="delete-item"><a href="./home.html"><span class="material-symbols-outlined">close</span></a></button>
+                                <label class="voting_label" for="yes">
+                                    <input type="text" placeholder="option" id="option-input">
+                                </label>
+                            </li>
+                            <li class="add-option">
+                                <button class="add-option__button">Add new</button>
+                            </li>
+                        </ul>
+                        <button class="voting__submit submit">create voting</button>
+                    </form>
+                </div>
             </div>
         </main>
     </wrapper>

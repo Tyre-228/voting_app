@@ -45,6 +45,7 @@
   border-radius: 5px;
   border: 2px solid transparent;
   transition: 200ms all;
+  font-size: calc(1rem + 0.5vw);
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;

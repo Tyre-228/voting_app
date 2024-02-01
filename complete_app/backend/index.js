@@ -18,7 +18,7 @@ connectToDB((err) => {
     }
 })
 
-app.use(express.static(path.join(__dirname, "../public")))
+
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*'); // Replace '*' with the specific origin you want to allow
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -71,6 +71,7 @@ app.get("/api/users/getByEmail/:email", async (req, res) => {
     }
     res.status(500).json({err: "User not found"})
 })
+//---USERS--------------------------------------------------------------------------------------
 app.get("/api/votings", (req, res) => {
     let data = []
     db.collection("votings").find().sort().forEach(e => {
@@ -93,8 +94,9 @@ app.get("/api/votings/:id", async (req, res) => {
         res.status(404).json({"status": "voting not found"})
     }
 })
+//---VOTINGS------------------------------------------------------------------------------------
 app.post("/api/users", (req, res) => {
-    const user = req.body
+    const user = JSON.parse(req.body)
     
     if(userJSONValidator(user) === true) {
         db.collection("users").insertOne(user)
@@ -110,7 +112,7 @@ app.post("/api/users", (req, res) => {
     }
 })
 app.post("/api/votings", (req, res) => {
-    const voting = req.body
+    const voting = JSON.parse(req.body)
 
     if(votingJSONValidator(voting) === true) {
         db.collection("votings").insertOne(voting)
@@ -125,6 +127,12 @@ app.post("/api/votings", (req, res) => {
         res.status(500).json({err: "Wrong input"})
     }
 })
+
+
+
+
+
+//---POSTS--------------------------------------------------------------------------------------
 app.delete("/api/users/:id", (req, res) => {
     if(ObjectId.isValid(req.params.id)) {
         db.collection("users")
@@ -154,36 +162,28 @@ app.delete("/api/votings/:id", (req, res) => {
         res.status(500).json({err: "Not a valid doc id"})
     }
 })
-//---API--------------------------------------------------------------------
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/login.html"))
-})
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/login.html"))
-})
-app.get("/home", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/home.html"))
-})
-app.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/register.html"))
-})
-app.get("/sign-out", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/sign_out.html"))
-})
 
 
-
-
-
-
-//---Routes--------------------------------------------------------------------
-
+//---DELETES------------------------------------------------------------------------------------
 app.all("*", (req, res) => {
-    res.status(404).sendFile(path.join(__dirname, "../public/404.html"))
+    res.status("404").json({"status": "not found"})
 })
-app.all("api/*", (req, res) => {
-    res.status(404).json({"status": "not found"})
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

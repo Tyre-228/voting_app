@@ -8,10 +8,9 @@ const addOptionHandler = () => {
         newOptionElem.className = "list__item"
         newOptionElem.innerHTML = `
         <button class="delete-item"><a href="./home.html"><span class="material-symbols-outlined">close</span></a></button>
-            <input type="radio" value="yes" class="option" name="option" id="yes">
-            <label class="voting_label" for="yes">
-                <input type="text" placeholder="option">
-            </label>
+        <label class="voting_label" for="yes">
+            <input type="text" placeholder="option" id="option-input">
+        </label>
         `
         addOptionContainer.before(newOptionElem)
     })
